@@ -3,49 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 3: How websites work?</title>
-    <link rel="stylesheet" href="styles.css">  
-    <script type="text/javascript" src="scripts.js"></script>      
-    </head>
-        <nav>
-            <ul>
-                <li> <a href="index.html"> Home Page</a></li>
-                <li> <a href="team-members.html"> About Our Team Members</a></li>
-                <li> <a href="hour-of-code.html"> Hour Of Code Event</a></li>
-                <li> <a href="web-project.html"> Web Project</a></li>
-                <li> <a href="code-artist.html"> Code Art</a></li>
-            </ul>
-        </nav>
-
-        <head>
-            <title>Homework 3: How websites work?</title>
-            <link rel="stylesheet" href="styles.css">  
-            <script type="text/javascript" src="scripts.js"></script>      
-        </head>
-        <body>
-            <section id="welcome" class="welcome-screen">
-            <header> 
-                <h1 id="custom-greeting"></h1>
-                <h1>Welcome to our team website!</h1>
-                <p> Learn about our team members, the Hour of Code event we hosted, and our new web project!</p>
-            <section id="team-logo-name">
-                    <img src="media/Picture9.jpg" alt="Team Logo" id="team-logo">
-                    <h1 id="team-name"> | Site Nova</h1>
-            </section>
-                
-            </header>
-            </section>
-
-           
-          
-
-        <main>
-
-
-
-
-
-        </main>
-        <script src="scripts.js"></script>
-    </body>
+    <title>Homework 3: Team Members</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="team-members.html">About Our Team Members</a></li>
+        <li><a href="hour-of-code.html">Hour Of Code Event</a></li>
+        <li><a href="web-project.html">Web Project</a></li>
+        <li><a href="code-artist.html">Code Art</a></li>
+      </ul>
+    </nav>
+    <section id="team-introduction">
+      <h2>About Our Team</h2>
+      <p>Our team consists of 4 members. We are:</p>
+      <div class="team-member">
+        <h3 onclick="toggleInfo('member1')">Zahra Ahmadova</h3>
+        <div class="team-info" id="member1">
+          <p>ADA University, BSIT2028</p>
+          <p><b>Team Leader</b></p>
+          <p>Skills: Strong foundational knowledge in HTML, CSS, and JavaScript</p>
+          <a href="mailto:zahmadova23945@ada.edu.az" class="contact-button">Contact Zahra</a>
+        </div>
+      </div>
+      <div class="team-member">
+        <h3 onclick="toggleInfo('member2')">Jamil Hajiyev</h3>
+        <div class="team-info" id="member2">
+          <p>ADA University, BSCS2028</p>
+          <p>Skills: Intermediate knowledge in HTML, CSS, and JavaScript</p>
+          <a href="mailto:jhajiyev16813@ada.edu.az" class="contact-button">Contact Jamil</a>
+        </div>
+      </div>
+      <div class="team-member">
+        <h3 onclick="toggleInfo('member3')">Babak Hasanov</h3>
+        <div class="team-info" id="member3">
+          <p>ADA University, BSIT2028</p>
+          <p>Skills: Familiarity with HTML and CSS</p>
+          <a href="mailto:bhasanov20400@ada.edu.az" class="contact-button">Contact Babak</a>
+        </div>
+      </div>
+      <div class="team-member">
+        <h3 onclick="toggleInfo('member4')">Fatima Mammadova</h3>
+        <div class="team-info" id="member4">
+          <p>ADA University, BSIT2028</p>
+          <p>Skills: Familiarity with HTML and CSS</p>
+          <a href="mailto:fmammadova23352@ada.edu.az" class="contact-button">Contact Fatima</a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
