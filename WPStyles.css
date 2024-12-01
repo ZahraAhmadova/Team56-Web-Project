@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #2d3047;
+    --accent-color: #e63946;
+    --background-color: #f1faee;
+    --text-color: #1d3557;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid var(--accent-color);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--accent-color);
+  }
+  
+  #web-project {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #overviewHeader {
+    font-size: 2rem;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  #overviewHeader::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto;
+  }
+  
+  .content-block {
+    margin-bottom: 30px;
+  }
+  
+  .content-block h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .content-block p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .content-block ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: square;
+  }
+  
+  .content-block ul li {
+    margin-bottom: 10px;
+  }
+  

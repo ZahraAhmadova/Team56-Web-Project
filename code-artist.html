@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Name Surname 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <nav>
+        <ul>
+            <li> <a href="index.html"> Home Page</a></li>
+            <li> <a href="team-members.html"> About Our Team Members</a></li>
+            <li> <a href="hour-of-code.html"> Hour Of Code Event</a></li>
+            <li> <a href="web-project.html"> Web Project</a></li>
+            <li> <a href="code-artist.html"> Code Art</a></li>
+        </ul>
+    </nav>
+    <head>
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #e0e0e0, #f5f5f5, #4a148c);
+                color: #490673;
+                text-align: center;
+                overflow-x: hidden;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 10px;
+                background-color: #4a148c;
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <canvas id="art-canvas" width="80" height="80">
+                Sorry ... your browser doesn't support the HTML5 canvas element.
+            </canvas>        
+        </div>          
+
+        <script type="text/javascript">
+            // Get reference to the 2D context of the canvas
+            let canva = document.getElementById("art-canvas");
+            let context = canvas.getContext("2d");
+            // Set the color for drawing lines using red, green and blue components
+            // context.strokeStyle = 'rgb(255, 0, 0)';
+            context.strokeStyle = 'rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})'
+            DrawSpiral(context);
+        </script>
+
+        <div style="text-align:center; margin-top: -80px;">
+            <canvas id="star-canvas" width="800" height="800"></canvas>
+        </div>
+
+        <script>
+            const canvas = document.getElementById('star-canvas');
+            const ctx = canvas.getContext('2d');
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            function drawComplexStar(ctx, centerX, centerY, radius, lineGroups, density) {
+                for (let g = 0; g < lineGroups; g++) {
+                    const groupRadius = radius - g * (radius / lineGroups); // Decrease radius for each group
+                    const lines = density + g * 5; // Increase the number of lines for each group
+
+                    for (let i = 0; i < lines; i++) {
+                        const angle1 = (i * 2 * Math.PI) / lines;
+                        const angle2 = ((i + Math.floor(lines / 3)) * 2 * Math.PI) / lines;
+
+                        const x1 = centerX + groupRadius * Math.cos(angle1);
+                        const y1 = centerY + groupRadius * Math.sin(angle1);
+
+                        const x2 = centerX + groupRadius * Math.cos(angle2);
+                        const y2 = centerY + groupRadius * Math.sin(angle2);
+
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.7)`;
+                        ctx.moveTo(x1, y1);
+                        ctx.lineTo(x2, y2);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            function drawArt() {
+                const radius = 300; // Max radius of the star
+                const lineGroups = 10; // Number of circular groups
+                const density = 30; // Base number of lines in the smallest group
+                drawComplexStar(ctx, centerX, centerY, radius, lineGroups, density);
+            }
+
+            // Draw the static art
+            drawArt();
+        </script>
+    </body>
+</html>

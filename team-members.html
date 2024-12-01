@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 3: Team members</title>
+    <link rel="stylesheet" href="styles.css">  
+    <script type="text/javascript" src="scripts.js"></script>    
+    <nav>
+        <ul>
+            <li> <a href="index.html"> Home Page</a></li>
+            <li> <a href="team-members.html"> About Our Team Members</a></li>
+            <li> <a href="hour-of-code.html"> Hour Of Code Event</a></li>
+            <li> <a href="web-project.html"> Web Project</a></li>
+            <li> <a href="code-artist.html"> Code Art</a></li>
+        </ul>
+    </nav>
+    <body>
+        <section id="team-introduction">
+            <h2>About Our Team</h2>
+            <p>Our team consists of 4 members, we are:</p>
+            <ul>
+                <li><span class='team-member' onclick="toggleInfo('member1')">Zahra Ahmadova</span></li>
+                <div class="team-info" id="member1">
+                    <p> ADA University, BSIT2028 </p>
+                    <p><b>Team Leader</b></p>
+                    <p>Skills: Strong foundational knowledge in HTML, CSS and JavaScript</p>
+                    <a href="mailto:zahmadova23945@ada.edu.az" class="contact-button">Contact Zahra</a></p>
+                </div>
+                <li><span class='team-member' onclick="toggleInfo('member2')">Jamil Hajiyev</span></li>
+                <div class="team-info" id="member2">
+                    <p> ADA University,BSCS2028 </p>
+                    <p>Skills: Intermediate knowledge in HTML,CSS and JavaScript</p>
+                    <a href="mailto:jhajiyev16813@ada.edu.az" class="contact-button">Contact Jamil</a>
+                    <p> </p>
+                </div>
+                <li><span class='team-member' onclick="toggleInfo('member3')">Babak Hasanov</span></li>
+                <div class="team-info" id="member3">
+                    <p> ADA University, BSIT2028</p>
+                    <p>Skills: Familiarity with HTML and CSS </p>
+                    <a href="mailto:bhasanov20400@ada.edu.az" class="contact-button">Contact Babak</a></p>
+                </div>
+                <li><span class='team-member' onclick="toggleInfo('member4')">Fatima Mammadova</span></li>
+                <div class="team-info" id="member4">
+                    <p> ADA University, BSIT2028 </p>
+                    <p>Skills: Familiarity with HTML and CSS</p>
+                    <a href="mailto:fmammadova23352@ada.edu.az" class="contact-button">Contact Fatima</a></p>
+                </div>
+            </ul>
+        </section>
+    </body>
+</html>
